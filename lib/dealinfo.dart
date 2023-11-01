@@ -64,7 +64,7 @@ class DealInfo extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     const Text(
-                      'Baigia galioti 2023-12-20',
+                      'Baigia galioti 2023-12-02',
                       style: TextStyle(
                         fontSize: 15,
                       ),
