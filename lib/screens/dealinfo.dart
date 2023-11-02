@@ -38,21 +38,6 @@ class DealInfo extends StatelessWidget {
             Container(
               width: double.infinity,
               height: MediaQuery.of(context).size.height,
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  transform: GradientRotation(0),
-                  colors: [
-                    Colors.white,
-                    Color.fromARGB(255, 211, 128, 21),
-                    Color.fromARGB(255, 211, 128, 21),
-                    Color.fromARGB(255, 211, 128, 21),
-                    Color.fromARGB(255, 211, 128, 21),
-                    Color.fromARGB(255, 211, 128, 21),
-                  ],
-                  begin: Alignment.topCenter,
-                  end: Alignment.center,
-                ),
-              ),
               child: Padding(
                 padding: const EdgeInsets.only(top: 120, left: 20, right: 20),
                 child: Column(
@@ -64,7 +49,7 @@ class DealInfo extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     const Text(
-                      'Baigia galioti 2023-12-02',
+                      'Baigia galioti 2023-12-20',
                       style: TextStyle(
                         fontSize: 15,
                       ),

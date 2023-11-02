@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:jurgio_kebabai/screens/deals.dart';
+import 'package:jurgio_kebabai/screens/location_page.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});
@@ -20,6 +22,12 @@ class DrawerWidget extends StatelessWidget {
               leading: const Icon(Icons.home),
             ),
             ListTile(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const dealPage(),
+                ),
+              ),
               dense: true,
               title: const Text('Pasiūlymai'),
               leading: const Icon(Icons.discount_outlined),
@@ -38,6 +46,12 @@ class DrawerWidget extends StatelessWidget {
               iconColor: Colors.grey[700],
             ),
             ListTile(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LocationPage(),
+                ),
+              ),
               dense: true,
               title: const Text('Restoranai'),
               leading: const Icon(Icons.location_pin),

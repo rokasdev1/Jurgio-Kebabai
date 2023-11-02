@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jurgio_kebabai/dealinfo.dart';
+import 'package:jurgio_kebabai/screens/dealinfo.dart';
+import 'package:jurgio_kebabai/widgets/drawer.dart';
 
 class dealPage extends StatelessWidget {
   const dealPage({super.key});
