@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jurgio_kebabai/widgets/bottom_sheet.dart';
 
 class DealInfo extends StatelessWidget {
   String orderImg = '';
@@ -17,7 +18,16 @@ class DealInfo extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: ElevatedButton(
         style: ElevatedButton.styleFrom(backgroundColor: Colors.green[900]),
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            builder: (context) => BottomSheetWidget(
+              order: order,
+              orderImg: orderImg,
+              time: time,
+            ),
+          );
+        },
         child: SizedBox(
           height: 50,
           width: MediaQuery.of(context).size.width - 50,
@@ -35,7 +45,7 @@ class DealInfo extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(orderImg),
-            Container(
+            SizedBox(
               width: double.infinity,
               height: MediaQuery.of(context).size.height,
               child: Padding(

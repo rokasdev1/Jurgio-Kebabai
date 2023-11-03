@@ -113,26 +113,28 @@ class homePage extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(10.0),
-                        child: GestureDetector(
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const dealPage(),
-                            ),
-                          ),
-                          child: Material(
-                            color: Colors.transparent,
-                            elevation: 4,
-                            child: SizedBox(
-                              width: 150,
-                              height: 150,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
-                                child: Image.asset("assets/images/5.png"),
+                        child: Builder(builder: (context) {
+                          return GestureDetector(
+                            onTap: () async => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const dealPage(),
                               ),
                             ),
-                          ),
-                        ),
+                            child: Material(
+                              color: Colors.transparent,
+                              elevation: 4,
+                              child: SizedBox(
+                                width: 150,
+                                height: 150,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Image.asset("assets/images/5.png"),
+                                ),
+                              ),
+                            ),
+                          );
+                        }),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(10.0),
