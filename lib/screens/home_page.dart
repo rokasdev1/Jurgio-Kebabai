@@ -3,10 +3,10 @@ import 'package:jurgio_kebabai/screens/deals.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../widgets/drawer.dart';
-import 'pasiulymai.dart';
+import '../widgets/offer_widgets.dart';
 
-class homePage extends StatelessWidget {
-  const homePage({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -55,16 +55,14 @@ class homePage extends StatelessWidget {
                           onTap: () {
                             showDialog<String>(
                                 context: context,
-                                builder: (BuildContext context) => Container(
-                                      child: const AlertDialog(
-                                          backgroundColor: Colors.black,
-                                          title: Text(
-                                            'PASIŪLYMAS!!!',
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          ),
-                                          content: bbq()),
-                                    ));
+                                builder: (BuildContext context) => const AlertDialog(
+                                    backgroundColor: Colors.black,
+                                    title: Text(
+                                      'PASIŪLYMAS!!!',
+                                      style:
+                                          TextStyle(color: Colors.white),
+                                    ),
+                                    content: BBQWidget()));
                           },
                           child: Material(
                             color: Colors.transparent,
@@ -86,16 +84,14 @@ class homePage extends StatelessWidget {
                           onTap: () {
                             showDialog<String>(
                                 context: context,
-                                builder: (BuildContext context) => Container(
-                                      child: const AlertDialog(
-                                          backgroundColor: Colors.white,
-                                          title: Text(
-                                            'Naujas produktas!',
-                                            style:
-                                                TextStyle(color: Colors.brown),
-                                          ),
-                                          content: kava()),
-                                    ));
+                                builder: (BuildContext context) => const AlertDialog(
+                                    backgroundColor: Colors.white,
+                                    title: Text(
+                                      'Naujas produktas!',
+                                      style:
+                                          TextStyle(color: Colors.brown),
+                                    ),
+                                    content: CoffeeWidget()));
                           },
                           child: Material(
                             color: Colors.transparent,
@@ -118,7 +114,7 @@ class homePage extends StatelessWidget {
                             onTap: () async => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const dealPage(),
+                                builder: (context) => const DealPage(),
                               ),
                             ),
                             child: Material(
@@ -226,9 +222,4 @@ class homePage extends StatelessWidget {
     );
   }
 
-  Future<void> _launchUrl(websiteUrl) async {
-    if (!await launchUrl(websiteUrl)) {
-      throw Exception('Could not launch');
-    }
-  }
 }

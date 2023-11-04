@@ -5,6 +5,6 @@ import 'package:jurgio_kebabai/screens/home_page.dart';
 
 void main() {
   runApp(
-    const MaterialApp(home: ProviderScope(child: homePage())),
+    const MaterialApp(home: ProviderScope(child: HomePage())),
   );
 }

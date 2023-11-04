@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jurgio_kebabai/screens/redeeming_page.dart';
 import 'package:screen_brightness/screen_brightness.dart';
 
+// ignore: must_be_immutable
 class BottomSheetWidget extends StatelessWidget {
   String orderImg = '';
   String order = '';
@@ -55,14 +56,15 @@ class BottomSheetWidget extends StatelessWidget {
           const Spacer(),
           ElevatedButton(
             style: ElevatedButton.styleFrom(backgroundColor: Colors.green[900]),
-            onPressed: () async {
-              await ScreenBrightness().setScreenBrightness(1);
+            onPressed: ()  {
+              
               Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => RedeemPage(
                         orderImg: orderImg, order: order, time: time),
                   ));
+                   ScreenBrightness().setScreenBrightness(1);
             },
             child: SizedBox(
               height: 50,

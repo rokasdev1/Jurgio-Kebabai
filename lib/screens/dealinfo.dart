@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jurgio_kebabai/widgets/bottom_sheet.dart';
 
+// ignore: must_be_immutable
 class DealInfo extends StatelessWidget {
   String orderImg = '';
   String order = '';

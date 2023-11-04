@@ -6,14 +6,14 @@ import 'package:jurgio_kebabai/screens/dealinfo.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class dealPage extends ConsumerStatefulWidget {
-  const dealPage({super.key});
+class DealPage extends ConsumerStatefulWidget {
+  const DealPage({super.key});
 
   @override
-  ConsumerState<dealPage> createState() => _dealPageState();
+  ConsumerState<DealPage> createState() => _DealPageState();
 }
 
-class _dealPageState extends ConsumerState<dealPage> {
+class _DealPageState extends ConsumerState<DealPage> {
   generateCode() {
     Random random = Random();
     ref.read(codeProvider.notifier).update((state) => random.nextInt(100000));
@@ -68,7 +68,7 @@ class _dealPageState extends ConsumerState<dealPage> {
                           child: Container(
                             padding: const EdgeInsets.all(10),
                             width: MediaQuery.of(context).size.width - 20,
-                            height: 230,
+                            
                             child: Column(
                               children: [
                                 const SizedBox(height: 20),
@@ -104,7 +104,7 @@ class _dealPageState extends ConsumerState<dealPage> {
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 crossAxisCount: 2,
-                childAspectRatio: (2.5 / 4),
+                childAspectRatio: (2.3 / 4),
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(10),

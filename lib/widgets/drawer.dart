@@ -25,7 +25,7 @@ class DrawerWidget extends StatelessWidget {
               onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const dealPage(),
+                  builder: (context) => const DealPage(),
                 ),
               ),
               dense: true,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class bbq extends StatelessWidget {
-  const bbq({super.key});
+class BBQWidget extends StatelessWidget {
+  const BBQWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +30,8 @@ class bbq extends StatelessWidget {
   }
 }
 
-class kava extends StatelessWidget {
-  const kava({super.key});
+class CoffeeWidget extends StatelessWidget {
+  const CoffeeWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

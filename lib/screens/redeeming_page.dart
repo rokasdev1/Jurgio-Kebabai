@@ -4,6 +4,7 @@ import 'package:jurgio_kebabai/providers/providers.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:screen_brightness/screen_brightness.dart';
 
+// ignore: must_be_immutable
 class RedeemPage extends ConsumerWidget {
   String orderImg = '';
   String order = '';
