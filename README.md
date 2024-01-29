@@ -1,6 +1,6 @@
 # jurgio_kebabai
 
-A new Flutter project.
+McDonalds inspired food app.
 
 ## Getting Started
 
